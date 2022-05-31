@@ -1,0 +1,791 @@
+<!doctype>
+<html lang="en">
+<head>
+	<title>audioflow</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<meta content="utf-8" http-equiv="encoding">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<!--font-->
+	<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700&display=swap" rel="stylesheet">
+
+	<!--jquery-->
+	<script src="./js/jquery-3.2.1.min.js" rel="text/javascript"></script>
+
+	<!--bootstrap-->
+	<script src="./js/popper.min.js" rel="text/javascript"></script>
+	<script src="./js/bootstrap.min.js" rel="text/javascript"></script>
+	<link href="./css/bootstrap.min.css" rel="stylesheet">
+
+	<!--font-awesome-->
+	<link href="./css/font-awesome.min.css" rel="stylesheet">
+
+	<!--fancybox-->
+	<script src="./js/jquery.fancybox.min.js" rel="text/javascript"></script>
+	<link href="./css/jquery.fancybox.min.css" rel="stylesheet">
+
+	<!--Custtom js & Css-->
+	<script src="./js/custom.js" rel="text/javascript"></script>
+	<link href="./css/custom.css" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+	<header class="site-header">
+		<div class="header-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6 header-left">
+						<div class="row">
+							<div class="header-logo">
+								<a href="#" target="blank">
+									<img src="./img/logo.png">
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 header-right">
+						<div class="row">
+							<div class="header-right-content">
+								<div class="header-login">
+									<a href="" class="login-btn" data-toggle="modal" data-target="#modalLRForm">
+										<button>Login</button>
+									</a>
+								</div>
+								<div class="header-shopnow">
+									<a href="#" target="blank">
+										<button class="shopnow-btn">Buy Now</button>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!--Modal: Login / Register Form-->
+	<script type="text/javascript">
+
+		function validate(){
+			var a = document.getElementById("modalLRInput4").value;
+			var b = document.getElementById("modalLRInput5").value;
+			if (a!=b) {
+				alert("Passwords do no match");
+				return false;
+			}
+		}
+
+	</script>
+	<div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog cascading-modal" role="document">
+			<!--Content-->
+			<div class="modal-content">
+
+				<!--Modal cascading tabs-->
+				<div class="modal-c-tabs">
+
+					<!-- Nav tabs -->
+					<ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
+						<li class="nav-item">
+							<a class="nav-link active" data-toggle="tab" href="#panel1" role="tab"><i class="fa fa-user mr-1"></i>
+							Login</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" data-toggle="tab" href="#panel2" role="tab"><i class="fa fa-user-plus mr-1"></i>
+							Register</a>
+						</li>
+					</ul>
+
+					<!-- Tab panels -->
+					<div class="tab-content">
+						<!--Panel 7-->
+						<div class="tab-pane fade in show active" id="panel1" role="tabpanel">
+
+							<!--Body-->
+							<div class="modal-body mb-1">
+								<form name="login" action="" method="POST" onSubmit="return validate()">
+									<div class="md-form form-sm mb-5">
+										<i class="fa fa-envelope"></i>
+										<input type="email" id="modalLRInput1" class="form-control form-control-sm validate" placeholder="Your email" required />
+									</div>
+
+									<div class="md-form form-sm mb-4">
+										<i class="fa fa-lock"></i>
+										<input type="password" id="modalLRInput2" class="form-control form-control-sm validate" placeholder="Your password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required />
+									</div>
+									<div class="text-center mt-2">
+										<button class="btn btn-info">Log in <i class="fa fa-sign-in ml-1"></i></button>
+									</div>
+								</form>
+							</div>
+							<!--Footer-->
+							<div class="modal-footer">
+								<div class="options text-center text-md-right mt-1">
+									<p>Not a member? Sign Up</p>
+									<p>Forgot <a href="#" class="blue-text">Password?</a></p>
+								</div>
+								<button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
+							</div>
+
+						</div>
+						<!--/.Panel 7-->
+
+						<!--Panel 8-->
+						<div class="tab-pane fade" id="panel2" role="tabpanel">
+
+							<!--Body-->
+							<div class="modal-body">
+								<form name="registration" action="" method="POST" onSubmit="return validate()">
+									<div class="md-form form-sm mb-5">
+										<i class="fa fa-envelope"></i>
+										<input type="email" id="modalLRInput3" class="form-control form-control-sm validate" placeholder="Your email" required />
+									</div>
+
+									<div class="md-form form-sm mb-5">
+										<i class="fa fa-lock"></i>
+										<input type="password" id="modalLRInput4" class="form-control form-control-sm validate" placeholder="Your password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required />
+									</div>
+
+									<div class="md-form form-sm mb-4">
+										<i class="fa fa-lock"></i>
+										<input type="password" id="modalLRInput5" class="form-control form-control-sm validate" placeholder="Repeat password">
+									</div>
+
+									<div class="text-center form-sm mt-2">
+										<button class="btn btn-info">Sign up <i class="fa fa-sign-in ml-1"></i></button>
+									</div>
+								</form>
+							</div>
+							<!--Footer-->
+							<div class="modal-footer">
+								<div class="options text-right">
+									<p class="pt-1">Already have an account? Log In</p>
+								</div>
+								<button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+						<!--/.Panel 8-->
+					</div>
+
+				</div>
+			</div>
+			<!--/.Content-->
+		</div>
+	</div>
+
+	<!-- Top Top Content -->
+	<div class="af_top_content">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-5 af_top_content_left">
+					<div class="row">
+						<div class="af_top_content_info">
+							<h1 class="af_top_content_title">Premium licensed audio for video creators</h1>
+							<div class="af_top_content_desc">Audioflow is s premium library of fully licensed & royalty-free audio tracks, & sound tools made for Creators & video agencies!</div>
+							<div class="af_top_content_btn">
+								<a href="#" target="blank"><button>Get Audioflow Now</button></a>
+							</div>
+							<div class="af_top_content_offer">
+								<span>Limited-Time Offer</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-7 af_top_content_right">
+					<div class="af_top_content_img">
+						<a href="#" target="blank" alt="top banner">
+							<img src="./img/top-banner.jpg">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Top AV Info -->
+	<div class="af_av_info">
+		<div class="af_av_info_container">
+			<div class="col-sm-6 af_av_info_left">
+				<div class="af_av_info_left_top">
+					<div class="af_av_info_img af_av_info_img_1">
+						<a data-fancybox="" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
+							<img src="./img/banner_1.png">
+							<div class="af_av_info_img_desc">
+								<i class="fa fa-play" aria-hidden="true"></i>
+								<div class="af_av_info_img_title">Rock</div>	
+							</div>
+						</a>
+					</div>
+					<div class="af_av_info_img af_av_info_img_2">
+						<a data-fancybox="" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
+							<img src="./img/banner_3.png">
+							<div class="af_av_info_img_desc">
+								<i class="fa fa-play" aria-hidden="true"></i>
+								<div class="af_av_info_img_title">Minimal</div>	
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="af_av_info_left_bottom">
+					<div class="af_av_info_img af_av_info_img_3">
+						<a data-fancybox="" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
+							<img src="./img/banner_2.png">
+							<div class="af_av_info_img_desc">
+								<i class="fa fa-play" aria-hidden="true"></i>
+								<div class="af_av_info_img_title">Pop</div>	
+							</div>
+						</a>
+					</div>
+					<div class="af_av_info_img af_av_info_img_4">
+						<a data-fancybox="" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
+							<img src="./img/banner_4.png">
+							<div class="af_av_info_img_desc">
+								<i class="fa fa-play" aria-hidden="true"></i>
+								<div class="af_av_info_img_title">Ukulele Jingles</div>	
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 af_av_info_left">
+				<div class="row">
+					<div class="af_av_info_info">
+						<h1 class="af_av_info_title">Great videos,  need great audio...</h1>
+						<div class="af_av_info_desc">Music makes the world go round... And more importantly, it helps to keep your viewers engaged to your message!</div>
+						<div class="af_av_info_btn">
+							<a href="#" target="blank"><button>Buy Now</button></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Top Audio Expensive Info -->
+	<div class="af_ae_info">
+		<div class="af_ae_info_container">
+			<div class="col-sm-6 af_ae_info_left">
+				<div class="af_ae_info_info">
+					<h1 class="af_ae_info_title">...But great audio is expensive</h1>
+					<div class="af_ae_info_desc">
+						<p>We know you love paying $40-$100 per track. And then having to pay an extra $280 for an extended license. it just feels good wasting all that money on one track... We get it... NOT!</p>
+						<p>You're an artist. You make great videos and should compliment your creativity. that's why we're making audioflow the most afforable audio solution for creators like you! You can thank us later... Or just give us your money now - that's fine too.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 af_ae_info_right">	
+				<div class="af_ae_info_left_desc">
+					<div class="af_ae_info_img af_ae_info_img_1">
+						<a href="#" target="blank" alt="top banner">
+							<img src="./img/shutterstock.jpg">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Un-licensed Audio -->
+	<div class="af_ula_info">
+		<div class="af_ula_info_container">
+			<div class="col-sm-6 af_ula_info_left">
+				<div class="af_ula_info_left_top">
+					<div class="af_ula_info_img af_ula_info_img_1">
+						<a href=""><img src="./img/audio_banner_1.png"></a>
+					</div>
+					<div class="af_ula_info_img af_ula_info_img_2">
+						<a href=""><img src="./img/audio_banner_2.png"></a>
+					</div>
+				</div>
+				<div class="af_ula_info_left_bottom">
+					<div class="af_ula_info_img af_ula_info_img_3">
+						<a href=""><img src="./img/audio_banner_3.png"></a>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 af_ula_info_right">
+				<div class="row">
+					<div class="af_ula_info_info">
+						<h1 class="af_ula_info_title">And un-licensed audio get's YouTube channels banned!</h1>
+						<div class="af_ula_info_desc">
+							<p>Music makes the world go round... And more importantly, it helps to keep your viewers engaged!</p>
+							<p>Bad audio on the other hand,turns viewers away and gives your video an amateur feel, and you don,t want that.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Un-licensed Audio -->
+	<div class="af_ap_info" style="background-image: url('./img/plan_bg.jpg');">
+		<div class="af_ap_info_container">
+			<div class="col-sm-6 af_ap_info_left">
+				<div class="af_ap_info_info">
+					<h1 class="af_ap_info_title">Meet Audioflow</h1>
+					<h1 class="af_ap_info_subtitle">It's <strike>like</strike> music to your ears</h1>
+					<div class="af_ap_info_desc">
+						<p>We let our music do the talking. Take a listen to some of the premium tracks you're getting fully licensed so you don't have to pay a lawyer to dispute your copyright claims...</p>
+					</div>
+					<div class="af_ap_info_btn">
+						<a href="#" target="blank"><button>Choose your plan</button></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Top Audio Tracks -->
+	<div class="af_at_info">
+		<div class="af_at_info_container">
+			<div class="row">
+				<div class="col-sm-6 af_at_info_left">
+					<div class="af_at_info_info">
+						<h1 class="af_at_info_title">100's of custom made tracks in all popular music genres</h1>
+						<div class="af_at_info_desc">
+							<p>We let our music do the talking. Take a listen to some of the premium tracks you're getting fully licensed so you don't have to pay a lawyer to dispute your copyright claims...</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 af_at_info_right">	
+					<div class="af_at_info_left_desc">
+						<div class="af_at_info_img af_ae_info_img_1">
+							<a data-fancybox="" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
+								<img src="./img/track.jpg">
+								<div class="af_at_info_img_desc">
+									<i class="fa fa-play" aria-hidden="true"></i>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Record Voice Content -->
+	<div class="af_rv_info">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 af_rv_info_left">
+					<div class="af_rv_info_img">
+						<a href=""><img src="./img/record_voice.jpg"></a>
+					</div>
+				</div>
+				<div class="col-sm-6 af_rv_info_right">
+					<div class="row">
+						<div class="af_rv_info_info">
+							<h1 class="af_rv_info_title">Record your own voiceover's</h1>
+							<div class="af_rv_info_desc"><p>We let our music do the talking. Take a listen to some of the premium tracks you're getting fully licensed so you don't have to pay a lawyer to dispute your copyright claims...</p></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Logo Intro -->
+	<div class="af_li_info">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 af_li_info_left">
+					<div class="af_li_info_info">
+						<h1 class="af_li_info_title">Incredible Logo Intro's & Idents for Openers</h1>
+						<div class="af_li_info_desc">
+							<p>We let our music do the talking. Take a listen to some of the premium tracks you're getting fully licensed so you don't have to pay a lawyer to dispute your copyright claims...</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Text to Speech -->
+	<div class="af_ts_info">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 af_ts_info_left">
+					<div class="af_ts_info_left_desc">
+						<div class="af_ts_info_img af_ae_info_img_1">
+							<a data-fancybox href="#track_video">
+								<img src="./img/text_to_speech.jpg">
+								<div class="af_ts_info_img_desc">
+									<i class="fa fa-play" aria-hidden="true"></i>
+								</div>
+							</a>
+							<video controls id="track_video" style="display:none;">
+								<source src="./video/text_to_speech.mp4" type="video/mp4">
+									Your browser doesn't support HTML5 video tag.
+							</video>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 af_ts_info_right">	
+					<div class="af_ts_info_info">
+						<h1 class="af_ts_info_title">Realistic Text-to-speech voiceover creator</h1>
+						<div class="af_ts_info_desc">
+							<p>We let our music do the talking. Take a listen to some of the premium tracks you're getting fully licensed so you don't have to pay a lawyer to dispute your copyright claims...</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Everything Include inside -->
+	<div class="af_eii_info">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 af_eii_info_heading">
+					<h1>Everything included inside Audioflow...</h1>
+					<span class="af_eii_info_subtitle">Hundreds of tracks in all top music genres & voiceover tools</span>
+				</div>
+				<div class="col-sm-12 af_eii_info_top">
+					<div class="af_eii_info_top_content">
+						<a href="">
+							<div class="af_eii_info_top_block">
+								<div class="af_eii_info_top_icon"><img src="./img/icon_1.png"></div>
+								<div class="af_eii_info_top_title"><span>Dance</span></div>
+							</div>
+						</a>
+					</div>
+					<div class="af_eii_info_top_content">
+						<a href="">
+							<div class="af_eii_info_top_block">
+								<div class="af_eii_info_top_icon"><img src="./img/icon_2.png"></div>
+								<div class="af_eii_info_top_title"><span>Ukulele</span></div>
+							</div>
+						</a>
+					</div>
+					<div class="af_eii_info_top_content">
+						<a href="">
+							<div class="af_eii_info_top_block">
+								<div class="af_eii_info_top_icon"><img src="./img/icon_3.png"></div>
+								<div class="af_eii_info_top_title"><span>Cinematic</span></div>
+							</div>
+						</a>
+					</div>
+					<div class="af_eii_info_top_content">
+						<a href="">
+							<div class="af_eii_info_top_block">
+								<div class="af_eii_info_top_icon"><img src="./img/icon_4.png"></div>
+								<div class="af_eii_info_top_title"><span>Upbeat</span></div>
+							</div>
+						</a>
+					</div>
+					<div class="af_eii_info_top_content">
+						<a href="">
+							<div class="af_eii_info_top_block">
+								<div class="af_eii_info_top_icon"><img src="./img/icon_5.png"></div>
+								<div class="af_eii_info_top_title"><span>Corporate</span></div>
+							</div>
+						</a>
+					</div>
+					<div class="af_eii_info_top_content">
+						<a href="">
+							<div class="af_eii_info_top_block">
+								<div class="af_eii_info_top_icon"><img src="./img/icon_6.png"></div>
+								<div class="af_eii_info_top_title"><span>Stomp</span></div>
+							</div>
+						</a>
+					</div>
+					<div class="af_eii_info_top_content">
+						<a href="">
+							<div class="af_eii_info_top_block">
+								<div class="af_eii_info_top_icon"><img src="./img/icon_7.png"></div>
+								<div class="af_eii_info_top_title"><span>Rock</span></div>
+							</div>
+						</a>
+					</div>
+					<div class="af_eii_info_top_content">
+						<a href="">
+							<div class="af_eii_info_top_block">
+								<div class="af_eii_info_top_icon"><img src="./img/icon_8.png"></div>
+								<div class="af_eii_info_top_title"><span>Pop</span></div>
+							</div>
+						</a>
+					</div>
+					<div class="af_eii_info_top_content">
+						<a href="">
+							<div class="af_eii_info_top_block">
+								<div class="af_eii_info_top_icon"><img src="./img/icon_9.png"></div>
+								<div class="af_eii_info_top_title"><span>Quirky/Funk</span></div>
+							</div>
+						</a>
+					</div>
+					<div class="af_eii_info_top_content">
+						<a href="">
+							<div class="af_eii_info_top_block">
+								<div class="af_eii_info_top_icon"><img src="./img/icon_10.png"></div>
+								<div class="af_eii_info_top_title"><span>Minimal</span></div>
+							</div>
+						</a>
+					</div>
+					<div class="af_eii_info_top_content">
+						<a href="">
+							<div class="af_eii_info_top_block">
+								<div class="af_eii_info_top_icon"><img src="./img/icon_11.png"></div>
+								<div class="af_eii_info_top_title"><span>Logo idents</span></div>
+							</div>
+						</a>
+					</div>
+					<div class="af_eii_info_top_content">
+						<a href="">
+							<div class="af_eii_info_top_block">
+								<div class="af_eii_info_top_icon"><img src="./img/icon_12.png"></div>
+								<div class="af_eii_info_top_title"><span>Indie</span></div>
+							</div>
+						</a>
+					</div>
+
+					<div class="af_eii_info_btn">
+						<a href="#" target="blank"><button>Bonus Christmas Tracks</button></a>
+					</div>
+				</div>
+
+				<div class="col-sm-12 af_eii_info_bottom">	
+					<div class="af_eii_info_img">
+						<a data-fancybox="" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
+							<img src="./img/bonus_track.jpg">
+							<div class="af_eii_info_img_desc">
+								<i class="fa fa-play" aria-hidden="true"></i>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Testimonial -->
+	<div class="af_testimonial">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 af_testimonial_info">
+					<div class="af_testimonial_heading">
+						<h1>Loved by top video creators</h1>
+					</div>
+					<div id="af_testimonial_slider" class="carousel slide" data-ride="carousel">
+
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<div class="af_testimonial_inner">
+									<div class="af_testimonial_creator_img">
+										<a href=""><img src="./img/creator_1.png"></a>
+									</div>
+									<div class="af_testimonial_desc">
+										<div class="af_testimonial_desc_p">
+											<p>Audio can make or break the success of your video. It controls the emotions, the attention and the retention of every video you view, and yet it has been a major headache, and expensive to find just the right audio track with the right mood, and is affordable, That is why AudioFlow will be a no-brainer purchase for you.</p>
+											<p>With premium, custom-created soundtracks, easy to use interface, lots of categories and 'moods' to selects from, all royalty-free so you can use them with confidence on any video you create, for any platform. Then add voice-over recording, text to speech conversion and a custom player and this is a must-have.</p>
+										</div>
+										<div class="af_testimonial_creator_name">
+											<a href="">Miles Austin - Fillthefunnel.com</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<div class="af_testimonial_inner">
+									<div class="af_testimonial_creator_img">
+										<a href=""><img src="./img/creator_2.png"></a>
+									</div>
+									<div class="af_testimonial_desc">
+										<div class="af_testimonial_desc_p">
+											<p>Audio can make or break the success of your video. It controls the emotions, the attention and the retention of every video you view, and yet it has been a major headache, and expensive to find just the right audio track with the right mood, and is affordable, That is why AudioFlow will be a no-brainer purchase for you.</p>
+											<p>With premium, custom-created soundtracks, easy to use interface, lots of categories and 'moods' to selects from, all royalty-free so you can use them with confidence on any video you create, for any platform. Then add voice-over recording, text to speech conversion and a custom player and this is a must-have.</p>
+										</div>
+										<div class="af_testimonial_creator_name">
+											<a href="">Miles Austin - Fillthefunnel.com</a>
+										</div>
+									</div>
+								</div>
+
+							</div>
+							<div class="carousel-item">
+								<div class="af_testimonial_inner">
+									<div class="af_testimonial_creator_img">
+										<a href=""><img src="./img/creator_3.png"></a>
+									</div>
+									<div class="af_testimonial_desc">
+										<div class="af_testimonial_desc_p">
+											<p>Audio can make or break the success of your video. It controls the emotions, the attention and the retention of every video you view, and yet it has been a major headache, and expensive to find just the right audio track with the right mood, and is affordable, That is why AudioFlow will be a no-brainer purchase for you.</p>
+											<p>With premium, custom-created soundtracks, easy to use interface, lots of categories and 'moods' to selects from, all royalty-free so you can use them with confidence on any video you create, for any platform. Then add voice-over recording, text to speech conversion and a custom player and this is a must-have.</p>
+										</div>
+										<div class="af_testimonial_creator_name">
+											<a href="">Miles Austin - Fillthefunnel.com</a>
+										</div>
+									</div>
+								</div>
+
+							</div>
+							<div class="carousel-item">
+								<div class="af_testimonial_inner">
+									<div class="af_testimonial_creator_img">
+										<a href=""><img src="./img/creator_4.png"></a>
+									</div>
+									<div class="af_testimonial_desc">
+										<div class="af_testimonial_desc_p">
+											<p>Audio can make or break the success of your video. It controls the emotions, the attention and the retention of every video you view, and yet it has been a major headache, and expensive to find just the right audio track with the right mood, and is affordable, That is why AudioFlow will be a no-brainer purchase for you.</p>
+											<p>With premium, custom-created soundtracks, easy to use interface, lots of categories and 'moods' to selects from, all royalty-free so you can use them with confidence on any video you create, for any platform. Then add voice-over recording, text to speech conversion and a custom player and this is a must-have.</p>
+										</div>
+										<div class="af_testimonial_creator_name">
+											<a href="">Miles Austin - Fillthefunnel.com</a>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<ol class="carousel-indicators">
+							<li data-target="#af_testimonial_slider" data-slide-to="0" class="active"></li>
+							<li data-target="#af_testimonial_slider" data-slide-to="1"></li>
+							<li data-target="#af_testimonial_slider" data-slide-to="2"></li>
+							<li data-target="#af_testimonial_slider" data-slide-to="3"></li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Buy AudioFlow -->
+	<div class="af_bl">
+		<div class="container">
+			<div class="row">
+				<div class="af_bl_heading">
+					<h1>Get Audioflow Now from <span>Just $49!</span></h1>
+				</div>
+				<div class="af_bl_top">
+					<div class="af_bl_inner">
+						<div class="af_bl_content">
+							<span class="af_bl_type">Personal License</span>
+							<span class="af_bl_price">$49</span>
+							<span class="af_bl_desc">Use on personal videos only One-time payment only</span>
+							<span class="af_bl_btn"><button><a href="">Buy Now</a></button></span>
+						</div>
+					</div>
+					<div class="af_bl_inner">
+						<div class="af_bl_content">
+							<span class="af_bl_tag">Most Popular</span>
+							<span class="af_bl_type">Commercial License</span>
+							<span class="af_bl_price">$99</span>
+							<span class="af_bl_desc">Use on personal videos only One-time payment only</span>
+							<span class="af_bl_btn"><button><a href="">Buy Now</a></button></span>
+						</div>
+					</div>
+				</div>
+				<div class="af_bl_bottom">	
+					<div class="af_bl_payment">
+						<div class="af_bl_payment_img">
+							<img src="./img/clock.png">
+						</div>
+						<div class="af_bl_bottom_desc">
+							<h1 class="af_bl_payment_title">One-Time Payment Only!</h1>
+							<p>No On-Going Fees! <span>Usually $299/year.</span></p>
+						</div>
+					</div>
+
+					<div class="af_bl_money_back">
+						<div class="af_bl_money_back_img">
+							<img src="./img/days.png">
+
+							<div class="af_bl_money_back_title">Your purchase is covered by our risk free, 30 day money back guarantee</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- F.A.Q -->
+	<div class="af_faq_info">
+		<div class="container">
+			<div class="row">
+				<div class="af_faq_heading"><h1>Frequently Asked Questions</h1></div>
+				<div class="col-sm-6 af_faq_info_left">
+					<div class="af_faq_info_desc">
+						<div class="af_faq_info_qua"><h1>Can I use Audioflow tracks in client videos?</h1></div>
+						<div class="af_faq_info_ans"><p>Yes, If you purchase the commercial rights license, you will receive a commercial license to use any track from audioflow in unlimited commercial projects for you and your clients, No additional fees!</p></div>
+					</div>
+					<div class="af_faq_info_desc">
+						<div class="af_faq_info_qua"><h1>Can I use Audioflow tracks in client videos?</h1></div>
+						<div class="af_faq_info_ans"><p>Yes, If you purchase the commercial rights license, you will receive a commercial license to use any track from audioflow in unlimited commercial projects for you and your clients, No additional fees!</p></div>
+					</div>
+				</div>
+				<div class="col-sm-6 af_faq_info_right">	
+					<div class="af_faq_info_desc">
+						<div class="af_faq_info_qua"><h1>Can I use Audioflow tracks in client videos?</h1></div>
+						<div class="af_faq_info_ans"><p>Yes, If you purchase the commercial rights license, you will receive a commercial license to use any track from audioflow in unlimited commercial projects for you and your clients, No additional fees!</p></div>
+					</div>
+					<div class="af_faq_info_desc">
+						<div class="af_faq_info_qua"><h1>Can I use Audioflow tracks in client videos?</h1></div>
+						<div class="af_faq_info_ans"><p>Yes, If you purchase the commercial rights license, you will receive a commercial license to use any track from audioflow in unlimited commercial projects for you and your clients, No additional fees!</p></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Copyright complaints -->
+	<div class="af_cc_info">
+		<div class="container">
+			<div class="row">
+				<div class="af_cc_heading"><h1>No more mediocre audio. No more expensive tracks. No more IIIegal copyright complaints.</h1></div>
+				<div class="af_cc_info_top">
+					<div class="af_cc_info_desc">
+						<div class="af_cc_info_p">
+							<p>This special deal won't last forever.</p>
+							<p>If you want incredible audio tracks & audio tools that help you make better videos without having to continually but new tracks or worry about YouTube copyright complaints and restricted audio licensing for you and your clients.</p>
+							<p>...click the button below to become an Audioflow member now for a low one-time price.</p>
+							<p>Don't let this opportunity slip through your fingers. Not when we're macking it so easy for you to get started.</p>
+							<p>Lock in your launch discount access now for a fraction of what you'd normally pay...</p>
+							<p>Remember, you've got a full 30 days to 'test-drive' Audioflow in any way you like. If you're not satisfide for ANY reason, simply shoot us an email and we'll hand you a full refund.</p>
+							<p>It doesn't get any better than this. For just one super-low, one-time payment</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- licensed Purches -->
+	<div class="af_lp_info" style="background-image: url('./img/purchase_bg.jpg');">
+		<div class="container">
+			<div class="af_lp_info_top">
+				<div class="af_lp_info_info">
+					<h1 class="af_lp_info_title">Ready to make better sounding videos?</h1>
+					<div class="af_lp_info_btn">
+						<a href="#" target="blank"><button>Choose Your Audioflow License Now</button></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<footer class="footer">
+		<div class="container">
+			<div class="af_footer_top">
+				<div class="af_footer_logo"><img src="./img/footer_logo.png"></div>
+			</div>
+			<div class="af_footer_center">
+				<div class="af_footer_desc"><p>The all-in-one professional audio solution for marketers & video creators. Proudly en-hancing thousands of videos all over the globe</p></div>
+			</div>
+			<div class="af_footer_bottom">
+				<ul class="af_footer_link">
+					<li><a href="#">Terms</a></li>
+					<li><a href="#">Disclaimer</a></li>
+					<li><a href="#">Cookie Policy</a></li>
+					<li><a href="#">Support</a></li>
+					<li><a href="" data-toggle="modal" data-target="#modalLRForm">Login</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</footer>
+	<a class="backtotop"><i class="fa fa-angle-up"></i></a>
+</body>
+</html>

@@ -1,0 +1,733 @@
+<!doctype>
+<html lang="en">
+<head>
+	<title>PointBet</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<meta content="utf-8" http-equiv="encoding">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<!--font-->
+	<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&display=swap" rel="stylesheet">
+
+	<!--jquery-->
+	<script src="./js/jquery-3.2.1.min.js" rel="text/javascript"></script>
+
+	<!--bootstrap-->
+	<script src="./js/popper.min.js" rel="text/javascript"></script>
+	<script src="./js/bootstrap.min.js" rel="text/javascript"></script>
+	<link href="./css/bootstrap.min.css" rel="stylesheet">
+
+	<!--font-awesome-->
+	<link href="./css/font-awesome.min.css" rel="stylesheet">
+
+	<!--owl.carousel-->
+	<script src="./js/owl.carousel.min.js" rel="text/javascript"></script>
+	<link href="./css/owl.carousel.min.css" rel="stylesheet">
+
+	<!--Custtom js & Css-->
+	<script src="./js/custom.js" rel="text/javascript"></script>
+	<link href="./css/custom.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="top-banner">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4 top-banner-left">
+					<div class="row">
+						<div class="top-banner-img">
+							<a href="#" target="blank">
+								<img src="./img/top-banner.png" alt="Top Banner">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<header class="site-header">
+		<div class="top-bar">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-8 top-bar-left">
+						<div class="row">
+							<div class="top-bar-menu">
+								<button class="menu-toggle"><i class="fa fa-bars" aria-hidden="true"></i></button>
+								<ul>
+									<li><a href="#">All</a></li>
+									<li><a href="#">NCAAF</a></li>
+									<li><a href="#">MLB</a></li>
+									<li><a href="#">Premium Picks</a></li>
+									<li><a href="#">Videos</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4 top-bar-right">
+						<div class="row">
+							<div class="top-bar-right-content">
+								<div class="top-bar-login">
+									<a href="" class="login-btn" data-toggle="modal" data-target="#modalLRForm">
+										<button><i class="fa fa-user" aria-hidden="true"></i><span>Login or Sign Up free</span></button>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	
+		<div class="header-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-2 header-left">
+						<div class="row">
+							<div class="header-logo">
+								<a href="#" target="blank">
+									<img src="./img/logo.png" alt="Logo">
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-8 header-middel">
+						<div class="row">
+							<div class="header-offer">
+								<span>PointsBet New Jersey Review + Bonus Code</span>
+
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-2 header-right">
+						<div class="row">
+							<div class="header-right-content">
+								<div class="header-site">
+									<a href="#" target="blank"  class="header-site-btn">
+										<button>Visit Website</button>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!--Modal: Login / Register Form-->
+	<script type="text/javascript">
+
+		function validate(){
+			var a = document.getElementById("modalLRInput4").value;
+			var b = document.getElementById("modalLRInput5").value;
+			if (a!=b) {
+				alert("Passwords do no match");
+				return false;
+			}
+		}
+
+	</script>
+	<div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog cascading-modal" role="document">
+			<!--Content-->
+			<div class="modal-content">
+
+				<!--Modal cascading tabs-->
+				<div class="modal-c-tabs">
+
+					<!-- Nav tabs -->
+					<ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
+						<li class="nav-item">
+							<a class="nav-link active" data-toggle="tab" href="#panel1" role="tab"><i class="fa fa-user mr-1"></i>
+							Login</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" data-toggle="tab" href="#panel2" role="tab"><i class="fa fa-user-plus mr-1"></i>
+							Register</a>
+						</li>
+					</ul>
+
+					<!-- Tab panels -->
+					<div class="tab-content">
+						<!--Panel 7-->
+						<div class="tab-pane fade in show active" id="panel1" role="tabpanel">
+
+							<!--Body-->
+							<div class="modal-body mb-1">
+								<form name="login" action="" method="POST" onSubmit="return validate()">
+									<div class="md-form form-sm mb-5">
+										<i class="fa fa-envelope"></i>
+										<input type="email" id="modalLRInput1" class="form-control form-control-sm validate" placeholder="Your email" required />
+									</div>
+
+									<div class="md-form form-sm mb-4">
+										<i class="fa fa-lock"></i>
+										<input type="password" id="modalLRInput2" class="form-control form-control-sm validate" placeholder="Your password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required />
+									</div>
+									<div class="text-center mt-2">
+										<button class="btn btn-info">Log in <i class="fa fa-sign-in ml-1"></i></button>
+									</div>
+								</form>
+							</div>
+							<!--Footer-->
+							<div class="modal-footer">
+								<div class="options text-center text-md-right mt-1">
+									<p>Not a member? Sign Up</p>
+									<p><a href="#" class="blue-text">Forgot Password?</a></p>
+								</div>
+								<button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
+							</div>
+
+						</div>
+						<!--/.Panel 7-->
+
+						<!--Panel 8-->
+						<div class="tab-pane fade" id="panel2" role="tabpanel">
+
+							<!--Body-->
+							<div class="modal-body">
+								<form name="registration" action="" method="POST" onSubmit="return validate()">
+									<div class="md-form form-sm mb-5">
+										<i class="fa fa-envelope"></i>
+										<input type="email" id="modalLRInput3" class="form-control form-control-sm validate" placeholder="Your email" required />
+									</div>
+
+									<div class="md-form form-sm mb-5">
+										<i class="fa fa-lock"></i>
+										<input type="password" id="modalLRInput4" class="form-control form-control-sm validate" placeholder="Your password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required />
+									</div>
+
+									<div class="md-form form-sm mb-4">
+										<i class="fa fa-lock"></i>
+										<input type="password" id="modalLRInput5" class="form-control form-control-sm validate" placeholder="Repeat password">
+									</div>
+
+									<div class="text-center form-sm mt-2">
+										<button class="btn btn-info">Sign up <i class="fa fa-sign-in ml-1"></i></button>
+									</div>
+								</form>
+							</div>
+							<!--Footer-->
+							<div class="modal-footer">
+								<div class="options text-right">
+									<p class="pt-1">Already have an account? Log In</p>
+								</div>
+								<button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+						<!--/.Panel 8-->
+					</div>
+
+				</div>
+			</div>
+			<!--/.Content-->
+		</div>
+	</div>
+	<div class="main-banner">
+		<div class="main-banner-img"><a href="#"></a></div>
+		<div class="pb-info">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-3 pb-info-left">
+						<div class="pb-site-info">
+							<div class="pb-site-info-rating">
+								<span><b>21</b><span class="sles">/</span>25<img src="./img/big-fill-star.png" alt="Rating star"></span>
+							</div>
+						</div>
+						<div class="pb-site-address">
+							<ul>
+								<li><b>Betting Site:</b><span><a href="#">PointsBet</a></span></li>
+								<li><b>Country:</b><span>Australia/USA</span></li>
+								<li><b>Established:</b><span>2017</span></li>
+								<li><b>Support:</b><span>Phone<br>24/7 Live chat<br>Email</span></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-6 pb-info-middel">
+						<div class="pb-info-intro">
+							<p>Pointsbet launched in  Australia in 2017 and is now bringing PointsBetting to New Jersey.</p>
+							<p>PoinsBet considers themselves as the best new online bookmaker due to their offering of all traditional fixed odds markets in Sports along with their unique betting Format called PoinsBetting.</p>
+						</div>
+						<div class="pb-info-service">
+							<ul>
+								<li>
+									<span class="pb-info-service1"><img src="./img/mobile-icon.png" alt="Mobile Icon"><b>Betting App: Yes</b></span>	
+								</li>
+								<li>
+									<span class="pb-info-service2"><img src="./img/home-icon.png" alt="Home Icon"><b>Brick And Mortar: Yes</b></span>	
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-3 pb-info-right">
+						<div class="row">
+							<div class="pb-info-ratting">
+								<b>PointsBet Sportsbook Rating:</b>
+								<ul>
+									<li>
+										<div class="pb-info-ratting-point"><b>Promo Code & Bonuses</b><span>3.5</span></div>
+										<div class="pb-info-ratting-star">
+											<span><img src="./img/small-f-star.png" alt="Rating star"></span>
+											<span><img src="./img/small-f-star.png" alt="Rating star"></span>
+											<span><img src="./img/small-f-star.png" alt="Rating star"></span>
+											<span><img src="./img/small-h-star.png" alt="Rating star"></span>
+											<span><img src="./img/small-n-star.png" alt="Rating star"></span>
+										</div>
+									</li>
+									<li>
+										<div class="pb-info-ratting-point"><b>Competitive Lines</b><span>4.5</span></div>
+										<div class="pb-info-ratting-star">
+											<span><img src="./img/small-f-star.png" alt="Rating star"></span>
+											<span><img src="./img/small-f-star.png" alt="Rating star"></span>
+											<span><img src="./img/small-f-star.png" alt="Rating star"></span>
+											<span><img src="./img/small-f-star.png" alt="Rating star"></span>
+											<span><img src="./img/small-h-star.png" alt="Rating star"></span>
+										</div>
+									</li>
+									<li>
+										<div class="pb-info-ratting-point"><b>Support</b><span>5.0</span></div>
+										<div class="pb-info-ratting-star">
+											<span><img src="./img/small-f-star.png" alt="Rating star"></span>
+											<span><img src="./img/small-f-star.png" alt="Rating star"></span>
+											<span><img src="./img/small-f-star.png" alt="Rating star"></span>
+											<span><img src="./img/small-f-star.png" alt="Rating star"></span>
+											<span><img src="./img/small-f-star.png" alt="Rating star"></span>
+										</div>
+									</li>
+									<li>
+										<div class="pb-info-ratting-point"><b>Banking</b><span>4.5</span></div>
+										<div class="pb-info-ratting-star">
+											<span><img src="./img/small-f-star.png" alt="Rating star"></span>
+											<span><img src="./img/small-f-star.png" alt="Rating star"></span>
+											<span><img src="./img/small-f-star.png" alt="Rating star"></span>
+											<span><img src="./img/small-f-star.png" alt="Rating star"></span>
+											<span><img src="./img/small-h-star.png" alt="Rating star"></span>
+										</div>
+									</li>
+									<li>
+										<div class="pb-info-ratting-point"><b>Withdraw</b><span>3.5</span></div>
+										<div class="pb-info-ratting-star">
+											<span><img src="./img/small-f-star.png" alt="Rating star"></span>
+											<span><img src="./img/small-f-star.png" alt="Rating star"></span>
+											<span><img src="./img/small-f-star.png" alt="Rating star"></span>
+											<span><img src="./img/small-h-star.png" alt="Rating star"></span>
+											<span><img src="./img/small-n-star.png" alt="Rating star"></span>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="pb-bonus-content">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-5 pb-bonus-left">
+					<div><b>Best Deposit Bonus</b><span>$1,000</span><a href="#">Learn More</a></div>
+				</div>
+				<div class="col-sm-4 pb-bonus-middle">
+					<div><b>Bonus Code</b><span>Wawvip</span></div>
+				</div>
+				<div class="col-sm-3 pb-bonus-right">
+					<div><a href="#"><button class="claim-now">Claim Now</button></a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="main-content">
+		<div class="left-sidebar">
+			<div class="sidebar__inner">
+				<ul class="left-sidebar-ul">
+					<li class="active promocode_before"><a href="#promocode" ><span>PointsBet Promo Code and Bounses</span></a></li>
+					<li class="promotions_before"><a href="#promotions"><span>Previous/Other PointsBet Promotions</span></a></li>
+					<li class="competitive_before"><a href="#competitive"><span>Competitive Lines</span></a></li>
+					<li class="support_before"><a href="#support"><span>Support</span></a></li>
+					<li class="banking_before"><a href="#banking"><span>Banking</span></a></li>
+					<li class="withdraw_before"><a href="#withdraw"><span>Withdraw</span></a></li>
+					<li class="whatwe_before"><a href="#whatwe"><span>What We Like and Don't Like</span></a></li>
+					<li class="offered_before"><a href="#offered"><span>Types of Bets Of Bets Offered by PointsBet</span></a></li>
+					<li class="mobile_app_before"><a href="#mobile_app"><span>PointsBet Mobile App</span></a></li>
+					<li class="in_person_before"><a href="#in_person"><span>When can you bet in-person using PointsBet?</span></a></li>
+					<li class="rewards_before"><a href="#rewards"><span>Rewards Program</span></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="content">
+			<div class="container">
+				<div class="row">
+					<div id="promocode" class="page-section">
+						<div class="content_heading">
+							<div class="content_title">PointsBet Promo Code and Bounses</div>
+							<div class="content_ratting">
+								<span><b>3.5</b><span class="sles">/</span>5</span>	
+								<span class="content_star">
+									<img src="./img/mid-f-star.png" alt="Rating star">
+									<img src="./img/mid-f-star.png" alt="Rating star">
+									<img src="./img/mid-f-star.png" alt="Rating star">
+									<img src="./img/mid-h-star.png" alt="Rating star">
+									<img src="./img/mid-n-star.png" alt="Rating star">
+								</span>
+							</div>
+						</div>
+						<div class="content_inner">
+							<p>When PointsBet Launched in the United States , they added three different welcome bonuses just for signing up. You get one free bet for signing up and the another two risk free bets worth up to<b> $1000 ($500 each wager)</b></p>
+
+							<p>Use Bonus Code <a href=""> WAWVIP </a> and you will get<b> all three welcome bonuses for signing up.</b></p>
+
+							<span class="content_subtitle"><span>$50</span>No-Deposit Bonus:</span>
+							<p>PointsBet also has a<b> $50 No-Deposit bonus</b> bet when you sign up.As long as you sign up for an account, PointsBet will give you $50 to place wagers on before having to deposit your own money, which is perfect for beginners who are just getting their feet wet. The $50 bonus bet cannot be withdrawn, but if you are able to win your bet, your winnings can be withdrawn.</p>
+
+							<p>PointsBet wants it to be known that you have seven days from signing up to use your bonus bet. Once you find a wager you would like to make, you will check the box to use your bonus bet, However, PointsBet does restrict customers on what they can bet thst bonus on too. You can't bet on anything over -200 odds. If there's a wager that you like a -210 odds, the bonus bet will not be allowed.</p>
+
+							<span class="content_subtitle">Two Risk Free Bets Totalling<span>&nbsp; $5000</span>:</span>
+							<p>PointsBet offers risk-free bets when you sign up to allow bettors two oppurtunities to win a risk-free bet. this helps eliminate the risk of a loss on your first wagen.</p>
+
+							<span class="content_subtitle"><span>$500</span>PointsBetting offer:</span>
+							<p>PointsBet allows new customers to try out their unique format called PointBetting with a guarantee refund on their first wager up to <b>$500</b> if their bet loses. Note: this offer would not apply if you use a stop-loss setting in your wager. The maximum loss should be set to <b>$500</b> or less to take full advantage of the offer. If refunded after a loss, the money returned would be given to you in bonus monet. This means you can't withdraw the refunded money but must play with it to turn it back into withdrawable money.</p>
+
+							<span class="content_subtitle"><span>$500</span>Fixed Odds Offer:</span>
+							<p>PointsBet gives the same refund (like the PointsBetting offer) to customers placing their first fixed-odds wager. If you lose, you will recieve a refund in bonus money, but still must play with it to turn it into real money that can be withdrawn.</p>
+
+							<div class="promocode_claim">
+								<div class="promocode_text">Use our Bonus Code <span>WAWVIP</span> at<a href=""> www.pointsbet.com</a> to claim your bonus today.</div>
+								<div class="promocode-claim-link"><a href="#">Claim Now</a></div>
+							</div>
+
+						</div>
+					</div>
+					<div id="promotions" class="page-section">
+						<div class="content_inner">
+							<div class="promocode_previous">
+								<div class="col-sm-6 promocode_previous_left">
+									<div class="row">
+										<a href=""><img src="./img/point_table.jpg" alt="Point Table"></a>
+									</div>
+								</div>
+								<div class="col-sm-6 promocode_previous_right">
+									<span class="content_subtitle"><span>Previous/Other PointsBet Promotions: </span></span>
+									<p>PointsBet.com has made a big splash with their promotions since debuting into the USA.</p>
+									<p>If you are looking for current promotions, just log in with your account credentials and click "promos" on the left hand toolbar.</p>
+									<p>Promotions change on a dat-to-day basis depending on which sports are in season or rivalry games that are being played.</p>
+								</div>
+							</div>
+							<div class="promocode_sample">
+								<span class="content_subtitle"><span>Here's a sampling of the promotions PointsBet runs:</span></span>
+								<div class="promocode_sample_inner">
+									<span class="content_subtitle"><span>No Juice Nfl Lines:</span></span>
+									<p>During the NFL last season,PointsBet added a promotion which eliminated the juice on NFL spreads. If the New York Giants were +3-110 you can get the Giants for +3 +100 and have batter odds with selection.having better odds means your weger would win more mouny if your team wins against the spread.</p>
+								</div>
+								<div class="promocode_sample_inner">
+									<span class="content_subtitle"><span>Random Booster Odds:</span></span>
+									<p>PointsBet frequently offers odds-boosts on random wegers every day. This means that certain wegers will be boosted giving bettors lots of value.For example,when the giants play the jets,we'llhypothetically say that the jets have +200 odds win the game.A random odds-boost might offer +350 for the jets to win the game.This would allow betters to win more money if they make a selection with the odds-boost.</p>
+								</div>
+								<div class="promocode_sample_inner">
+									<span class="content_subtitle"><span>Early Payouts:</span></span>
+									<p>PointsBet sporadically comes out with early payouts that pay your pre-game weger instantly if the team you back goes ahead by a certain number of points. During the NHL playoffs,the team you backed led by two goals,you would get an instant payout having to hold your breath waiting for the final horn.</p>
+								</div>
+								<div class="promocode_sample_inner">
+									<span class="content_subtitle">OUR FAVORITE<span> Name Your Bet:</span></span>
+									<p>Most recetly,PointsBet dot clever and interactive with a name your bet promotion.they bettor/cuatomer to txeet @PointBetUSA with any bet,outside the box,or not,to their account where they would look through diifirent inquiries and create odds for your idea.</p>
+								</div>
+								<div class="promocode_sample_inner">
+									<span class="content_subtitle"><span>PointBet Game Day Guarantee:Samrt Money Welcome</span></span>
+									<p>Recently,some sportsbooks have limited bettors to $5 or $1 wager just because they've won a lot. This is legal and allowed but it's definitely defeating. On April 2019,PointBET showed their support for bettors that are goods at what they do. They announced "Game Day Guarantee" to appeal to gamblers that have been dumped by other sportbooks.PointBet will accept wegers high as $10,000 on game day for all wegers on the NBA,and NFL no matter what.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="competitive" class="page-section">
+						<div class="content_heading">
+							<div class="content_title">Competitive Lines</div>
+							<div class="content_ratting">
+								<span><b>4.5</b><span class="sles">/</span>5</span>	
+								<span class="content_star">
+									<img src="./img/mid-f-star.png" alt="Rating star">
+									<img src="./img/mid-f-star.png" alt="Rating star">
+									<img src="./img/mid-f-star.png" alt="Rating star">
+									<img src="./img/mid-f-star.png" alt="Rating star">
+									<img src="./img/mid-h-star.png" alt="Rating star">
+								</span>
+							</div>
+						</div>
+						<div class="content_inner">
+							<div class="competitive_inner">
+								<div class="col-sm-8 competitive_previous_left">
+									<div class="row">
+										<p>PointBet Sportbook has a wide array of game selection with moneylines, spreads, parlay, total, futures, along with player props and future props to go with their signature PointBetting.</p>
+										<p>In comparison to other sportbooks,PointBet features fair odds on their site do a great job updating the line regularly.</p>
+									</div>
+								</div>
+								<div class="col-sm-4 competitive_previous_right">
+									<a href=""><img src="./img/total_match_point.jpg" alt="Total Match Point"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="support" class="page-section">
+						<div class="content_heading">
+							<div class="content_title">Support</div>
+							<div class="content_ratting">
+								<span><b>5</b><span class="sles">/</span>5</span>	
+								<span class="content_star">
+									<img src="./img/mid-f-star.png" alt="Rating star">
+									<img src="./img/mid-f-star.png" alt="Rating star">
+									<img src="./img/mid-f-star.png" alt="Rating star">
+									<img src="./img/mid-f-star.png" alt="Rating star">
+									<img src="./img/mid-f-star.png" alt="Rating star">
+								</span>
+							</div>
+						</div>
+						<div class="content_inner">
+							<div class="support_inner">
+								<p>For new sports bettors,pointBet has ca couple of blog called "The Review Betting Academy"which explins the diifernt types of bets that are offerd.Live chat is available 24/7 online.</p>
+								<p>Phone support is available frpm 8am to midnight every day.Phone support is around for 16 hours of the day. The e-mail and chat options are at the bottom of every page on the site and are easily noticeable. They also have a "help"section with a list of FAQ that are very detailed in detailed in helpful to customers who don't want to wait to chat to a real person.</p>
+							</div>
+						</div>
+
+					</div>
+					<div id="banking" class="page-section">
+						<div class="content_heading">
+							<div class="content_title">Banking</div>
+							<div class="content_ratting">
+								<span><b>4.5</b><span class="sles">/</span>5</span>	
+								<span class="content_star">
+									<img src="./img/mid-f-star.png" alt="Rating star">
+									<img src="./img/mid-f-star.png" alt="Rating star">
+									<img src="./img/mid-f-star.png" alt="Rating star">
+									<img src="./img/mid-h-star.png" alt="Rating star">
+									<img src="./img/mid-n-star.png" alt="Rating star">
+								</span>
+							</div>
+						</div>
+						<div class="content_inner">
+							<div class="banking_inner">
+								<div class="col-sm-5 banking_left">
+									<div class="row">
+										<a href=""><img src="./img/banking.jpg" alt="Banking"></a>
+									</div>
+								</div>
+								<div class="col-sm-7 banking_right">
+									<p>At PointBet NJ you  can  deposit using many option. the minimum deposit is $5 for the sport betting beginner who doesn't want to wager much.</p>
+
+									<p><span class="content_subtitle"><span>Debit & Credit Carda - </span></span>The minimum deposit is $5 and a maximum deposit of $50,000. Most banks do not allow debit cards to deposit money into gambling/gaming sites. This isn't PointBet's fault.</p>
+
+									<p><span class="content_subtitle"><span>Online Banking - </span></span>At PointBet,they recommend using online banking.with this feature,you can choose from over 1,000 differnt bank options,securely sign into your bank and deposit money fluently.</p>
+
+									<p><span class="content_subtitle"><span>PointBet Card - </span></span>You can apply for a PointBet Mastercard on the deposit  screen.You can set it up by clicking PoinyBet Mastercard on the deposit screen.You will receive a digital version instantly and a physical card will come a couple weeks later at the latest.</p>
+
+									<p><span class="content_subtitle"><span>PayNearMe - </span></span>PointBet allows customers to deposit money into their account with over 27,000 convenient cash payment locations.If you are without a bank,you can deposit this way.</p>
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="withdraw" class="page-section">
+						<div class="content_heading">
+							<div class="content_title">Withdraw</div>
+							<div class="content_ratting">
+								<span><b>4.5</b><span class="sles">/</span>5</span>	
+								<span class="content_star">
+									<img src="./img/mid-f-star.png" alt="Rating star">
+									<img src="./img/mid-f-star.png" alt="Rating star">
+									<img src="./img/mid-f-star.png" alt="Rating star">
+									<img src="./img/mid-f-star.png" alt="Rating star">
+									<img src="./img/mid-h-star.png" alt="Rating star">
+								</span>
+							</div>
+						</div>
+						<div class="content_inner">
+							<div class="withdraw_inner">
+								<p>Players are only able to request an ACH/eChek(wire transfer) or uses their PointBet Card for withdrawls. There needs to be more deposit methods in the future with the rating to go up.</p>
+							</div>
+						</div>
+					</div>
+					<div class="promocode_claim after_withdraw">
+						<div class="promocode_text">Use our Bonus Code <span>WAWVIP</span> at<a href=""> www.pointsbet.com</a> to claim your bonus today.</div>
+						<div class="promocode-claim-link"><a href="#">Claim Now</a></div>
+					</div>
+					<div id="whatwe" class="page-section">
+						<div class="whatwe_heading"><div class="whatwe_heading_inner"> <span style="color: #1fa6c4;">What We Like</span> and <span style="color: #555555;">Don't Like</span></div></div>
+
+						<div class="whatwe_like">
+							<div class="content_inner">
+								<span class="content_subtitle"><span>What We Like About PointBet NJ</span></span>
+								<p>PointBet has their own unique feature called PointBetting.(Standers wagers are available on PointBet too.)</p>
+
+								<p>If your bet wins by a point over the stated bet on Pointsbet, you can win 1x what was originally betted. But if you win two, three, or four points over the bet, you'will win double, triple or quadruple your original bet. However, if your bet ends up losing, the same prinsiples apply in reverse. You can limit your exposuse to losses by adjusting how much you wager per point. there's also-loss button where you can then at how much higher you want to risk it.</p>
+
+								<p>We also like the mobile set up where you can access the PointBet app on Apple and android devices.</p>
+
+								<p>PointBet will also randomly give back to their customers on losses called Karma Payouts.PointBet will pay customers as if they won their bet where the bettor's team lost on a heartbracking play.This is random and you cannot bet on a game knowing a karma payout will be paid.</p> 
+							</div>	
+						</div>
+
+						<div class="whatwe_dn_like">
+							<div class="content_inner">
+								<span class="content_subtitle"><span>What We Dont't Like About PointBet NJ</span></span>
+								<p>On PointBet,the sportbook doesn't offer teasers or round robin parlays.Many people love this feature especially during the NFL season.Those players will need to choose a differnt sportbook.</p>
+
+								<p>If you're not careful with PointBetting,a simple $10 wager can really rob you of cash.Small wagers are necessary if you must PointBet.It's unique feature,but if you're not careful,you can lose a yon of money fast.</p>
+							</div>	
+						</div>
+					</div>
+					<div id="offered" class="page-section">
+						<div class="content_heading">
+							<div class="content_title">Type of Bets Of Bets Offered by PointsBet</div>
+						</div>
+						<div class="content_inner">
+							<div class="offered_inner">
+								<div class="col-sm-12 offered_previous_top"><p>PointBet has a large array of wagers on the menu from traditional and spread betting markets. PointBet has promised to offer more markets on US sports than any other sportbook.They've had 200 indibidual betting options for single game.Here are some of the bets that  PointBet offers:</p>
+								</div>
+								<div class="col-sm-5 offered_previous_left">
+									<div class="row">
+										<span class="content_subtitle"><span>Against the Spread bets</span></span>
+										<span class="content_subtitle"><span>Point total (Over/Under)</span></span>
+										<span class="content_subtitle"><span>Total passing yards for aspecific quarterback</span></span>
+										<span class="content_subtitle"><span>Running yards for a running back or how many receving touchdowns for a receiver</span></span>
+										<span class="content_subtitle"><span>How many seconds it will br brfore the first scoring play</span></span>
+										<span class="content_subtitle"><span>The winning margin</span></span>
+										<span class="content_subtitle"><span>Largest lead acquired by either team at any point during the game</span></span>
+										<span class="content_subtitle"><span>Individual NBA playre's 3-point filed goal percentage (or any individual stat with points/rebounds/assists along with steals and blocks.)</span></span>
+									</div>
+								</div>
+								<div class="col-sm-7 offered_previous_right">
+									<a href=""><img src="./img/offere.jpg" alt="Offere"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="mobile_app" class="page-section">
+						<div class="content_heading">
+							<div class="content_title">PointsBet Mobile App</div>
+						</div>
+						<div class="content_inner">
+							<div class="mobile_app_inner">
+								<div class="col-sm-4 mobile_app_left">
+									<p>Mobile Screenshots</p>
+									<div id="mobile_app_slider" class="owl-carousel">
+										<li><img src="./img/mobile_ss_1.png" alt="Rating star"></li>
+										<li><img src="./img/mobile_ss_2.png" alt="Rating star"></li>
+										<li><img src="./img/mobile_ss_3.png" alt="Rating star"></li>
+										<li><img src="./img/mobile_ss_4.png" alt="Rating star"></li>
+										<li><img src="./img/mobile_ss_5.png" alt="Rating star"></li>
+									</div>
+								</div>
+								<div class="col-sm-8 mobile_app_right">
+									<p>The  PointBet mobile app is available for ISO and Android devices.You can download the app from the app from the App Store or by visiting  PointBet.com.The  PointBet app currently has a 4.4 rating out of 5 with 158 rating in the app store. The app is responsive and allows for an awesome betting experince.</p>
+
+									<p>PointBet is a refined mobile sportbook in the US.Once you log-in to  PointBet,you're greeted with tons of featured betting markets and a navigation bar to help you find exactly the bet you're looking for.The menu bar is located in the bottom of the app and gives customers access to quickly change between sports wagers,in-play bets that have been placed,along with diffrent promotions that  PointBet is using.There's also a tab to manage your account whether you would like to deposit money,withdraw money,or change privacy settings.</p>
+
+									<p>Per the reviews on the  PointBet app,many customes can't get over  PointBet offering 250 individual marks for a single game alone on the mobile device.</p>
+
+									<p class="last-child">The front page on  PointBet usually shows the top games for the day but if you click the option "sports" from the bottom menu,you will be able to see the list of live and upcoming games that day and beyond.</p>
+
+									<div class="app_store">
+										<div class="iphone"><a href=""><img src="./img/apple.png" alt="Apple"></a></div>
+										<div class="play_store"><a href=""><img src="./img/play_store.png" alt="Play Store"></a></div>
+										<div class="app_store_code"><span class="code_left">Use Our Bonus Code</span><span class="code_right">WAWVIP</span></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="in_person" class="page-section">
+						<div class="content_heading">
+							<div class="content_title">Where can you bet in-person using PointsBet?</div>
+						</div>
+						<div class="content_inner">
+							<div class="in_person_inner">
+								<p>After PointBet secured licence in New Jeresey,they're now looking to move outside of New Jeresey. PointBet has plans to be licensed in five states currently.</p>
+								
+								<span class="in_person_subtitle">New Jersey</span>
+								<span class="content_subtitle"><span>Land-based Partner: Meadowlands Racetrack</span></span>
+								<p>PointBet has launched online and in-person betting in New Jersey in 2018 in partnership with the Meadowlands Racetrack in East Rutherford (next to Metlife stadium,home of the Gints and Jets.)</p>
+
+								<span class="in_person_subtitle">New York</span>
+								<span class="content_subtitle"><span>Land-Based Partner:Tiogo Downs Casino Resort</span></span>
+								<p>PointBet has agreed to a deal with Tiogo Downs Casino Resort in hopes that New York will soon legalize online sport betting.</p>
+
+								<span class="in_person_subtitle">Illinois</span>
+								<span class="content_subtitle"><span>Land-Based Partner:Hawthorne Race Course</span></span>
+								<p>PointBet will be good to go in Chicago once online sport betting in legal. PointBet and Hawthorne have a deal in place that will have online betting, a mobile app,and a retail sportsbook. PointBet will also manage differnt sportsbooks at off-track locations that will be managed by Hawthorne as well.</p>
+
+
+								<span class="in_person_subtitle">Lowa</span>
+								<span class="content_subtitle"><span>Land-Based Pertner:Catfish Bend Casino</span></span>
+								<p>PointBet has a retail sportbooks live in Catfish bend Casino in lowa as of April 2019.The retail sportbooks opened for business on August 19,2019 with online betting following soon.lowa's law requies customers to register their accounts at catfish Bend Casino,which is quite a hassle,but a starting point for lowa and  PointBet.</p>
+
+								<span class="in_person_subtitle">Colorado</span>
+								<span class="content_subtitle"><span>Land Based Partner:Double Eagle Hotal and Casino</span></span>
+								<p>PointBet reached a deal with Double Eagle Hotal and Casino in july of 2019.PointBet made the deal hoping sports betting will be voted on and apporoved in the November 2019 election. Once approved,PointBet will launch a venue that will have the sportbook,along with multiple TV's and viewing parties.It's unsure whether online and mobile betting is also in the deal,but licensed sportsbooks will have that luxury.PointBetwill likely go after mobile betting in colorado once it's legal.</p>
+
+							</div>
+						</div>
+					</div>
+					<div id="rewards" class="page-section">
+						<div class="content_heading">
+							<div class="content_title">Where can you bet in-person using PointsBet?</div>
+						</div>
+						<div class="content_inner">
+							<div class="rewards_inner">
+								<p>To ensure loyalty with their customers,PointBet has a VIP Rewards program.100 points in the reward program is worth $1.</p>
+
+								<p>
+									<span class="content_subtitle"><span>For every $1 on a PointBetting wager,you recive 1 reward point.</span></span>
+									<span class="content_subtitle"><span>For every $1 on a fixxed wagering,you recive 1 reward point.</span></span>
+									<span class="content_subtitle"><span>For every $1 on a parlay  wager,you recive 1 reward point.</span></span>
+								</p>
+								<p>The reward system can be better.It would take 500 points to recive five dollerd. However,this isn't real money.It becomes a bonus bet.still,it's good to know that you can earn some of your money back by being a loyal customer.</p>
+
+							</div>
+						</div>
+					</div>
+					<div class="promocode_claim after_rewards">
+						<div class="promocode_text">Use our Bonus Code <span>WAWVIP</span> at<a href=""> www.pointsbet.com</a> to claim your bonus today.</div>
+						<div class="promocode-claim-link"><a href="#">Claim Now</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Footer -->
+	<footer class="footer">
+		<div class="footer_top">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4 pb_footer_left">
+						<div class="pb_footer_left_logo"><img src="./img/insider.png" alt="Insider"></div>
+						<div class="pb_footer_left_desc">100% free to join! Get Insider's access to exclusive content and updates - more picks, more winners!</div>
+						<div class="pb_footer_left_btn">
+							<a href="#" target="blank" >Find Out More</a>
+						</div>
+					</div>
+					<div class="col-sm-4 pb_footer_center"></div>
+					<div class="col-sm-4 pb_footer_right">
+						<div class="pb_footer_right_logo"><img src="./img/footer_logo.png" alt="Footer Logo"></div>
+						<div class="pb_footer_right_desc">Winners and Whiners is the premier source for the complete analysis, along with actual predictiona on every game fore every major sport in America - every day!</div>
+						<ul class="pb_footer_link">
+							<li><a href="#">About</a></li>
+							<li><a href="#">Contact</a></li>
+							<li><a href="#">Legal</a></li>
+							<br>
+							<li><a href="#">Handicapper Reviews</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer_bottom">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="pb_copyright">&copy; 2015-2019, All Rights Reserved - <a href="">Winners And Whiners</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<a class="backtotop"></a>
+</body>
+</html>
